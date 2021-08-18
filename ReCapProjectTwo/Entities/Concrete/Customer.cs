@@ -1,12 +1,14 @@
-﻿using System;
+﻿using Core.Entities;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace Entities.Concrete
 {
-    public class Customer
+    public class Customer : IEntity
     {
         public int UserrId { get; set; }
         public string CompanyName { get; set; }
     }
 }
+ 
