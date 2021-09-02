@@ -8,5 +8,9 @@ namespace Business.ValidationRules.FluentValidation
 {
     public class RentalValidator : AbstractValidator<Rental>
     {
+        public RentalValidator()
+        {
+            RuleFor(r => r.CustomerId).GreaterThan(-1);
+        }
     }
 }

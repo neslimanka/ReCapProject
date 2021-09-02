@@ -12,6 +12,11 @@ namespace Business.Constant
         public static string CarNameInvalid = "Ürün ismi geçersiz";
         public static string MaintenanceTime = "Sistem bakımda";
         public static string Listed = "Ürünler listelendi";
+        public  static string CarImageLimitExceded="Bİr Arabanın en fazla 5 resmi olabilir";
+        internal static string CarImageNotFound;
+        internal static string ItemsListed;
+        internal static string GetItem;
+        internal static string UpdatedSuccess;
         //////////////////////////////////////////////////////////////////////////////////////////
 
 
