@@ -9,9 +9,10 @@ namespace ConsoleUI
     {
         static void Main(string[] args)
         {
-            // BrandTest();
-            // CarTest();
+           
             UserTest();
+            CarTest();
+            BrandTest();
             Console.WriteLine("--------------------------------------------------------");
 
             Console.Read();

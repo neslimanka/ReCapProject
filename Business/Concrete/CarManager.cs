@@ -1,5 +1,7 @@
 ﻿using Business.Abstract;
+using Business.BusinessAspect.Autofac;
 using Business.Constant;
+using Core.Aspects.Autofac.Validation;
 using Core.Utilities.Results;
 using DataAccess.Abstract;
 using DataAccess.InMemory;
@@ -8,6 +10,7 @@ using Entities.DTO;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using Business.ValidationRules.FluentValidation;
 
 namespace Business.Concrete
 {
@@ -24,6 +27,9 @@ namespace Business.Concrete
         {
             this.ınMemoryCarDal = ınMemoryCarDal;
         }
+
+        [SecuredOperation("product.add,admin")]
+        [ValidationAspect(typeof(CarValidator))]
         public IResult Add(Car car)
         {
             if (car.CarName.Length >= 2 && car.Price >= 0)
